@@ -1,11 +1,17 @@
 import socket
 from colorama import Back, Fore, Style, deinit, init
+import json
+
+with open('config.json') as f:
+    config = json.load(f)
+
 
 init()
 
-HOST = '192.168.1.42'
-PORT = 6789
+HOST = config.get('host')
+PORT = int(config.get('port'))
 
+f.close()
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind((HOST,PORT))
 socket.listen(1)
