@@ -5,10 +5,10 @@ Basic Python chat with socket
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install socket.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install colorama.
 
 ```bash
-pip install socket
+pip install colorama
 ```
 
 open the config.json file and put config the host(your local ip) and port (i need to be not allready use)

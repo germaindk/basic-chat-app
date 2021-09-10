@@ -11,6 +11,11 @@ init()
 HOST = config.get('host')
 PORT = int(config.get('port'))
 
+
+if HOST == "your local ip":
+	print('You need to put your local ip in the config.json file')
+	exit()
+
 f.close()
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind((HOST,PORT))
